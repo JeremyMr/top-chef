@@ -55,20 +55,20 @@ function get_page(url, callback) {
         if (!error) {
             var $ = cheerio.load(html);
             var title = $('.poi_intro-display-title').first().text();
-            var address = $('.thoroughfare').first().text();
-            var postal_code = $('.postal-code').first().text();
-            var city = $('.locality').first().text();
-            var description = $('.poi_intro-display-cuisines, .opt-upper__cuisines-info').first().text();
             var stars = $('.michelin-poi-distinctions-list').children('li').first().children('.content-wrapper').text()[0];
+            var address = $('.thoroughfare').first().text();
+            var city = $('.locality').first().text();
+            var postal_code = $('.postal-code').first().text();            
+            var type = $('.poi_intro-display-cuisines, .opt-upper__cuisines-info').first().text();            
             var chef = $('.field--name-field-chef').children('.field__items').children('.field__item').first().text()
 
             var restaurant = {
                 "title": normalize(title),
-                "address": address,
-                "postal_code": postal_code,
-                "city": city,
-                "description": normalize(description),
                 "stars":stars,
+                "address": address,
+                "city": city,
+                "postal_code": postal_code,                
+                "type": normalize(type),                
                 "chef": chef,
                 "url": url
             };
@@ -77,7 +77,7 @@ function get_page(url, callback) {
     });
 }
 
-//There is spaces in the title and the description so we have to delete them
+//There is spaces in the title and the type so we have to delete them
 function normalize(item) {
     let newItem = "";
     let count = 0;
