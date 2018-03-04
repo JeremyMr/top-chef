@@ -108,11 +108,3 @@ function number_pages(url, callback) {
 }
 
 module.exports.get = get;
-
-
-
-/*http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.write('Test');
-    res.end();
-}).listen(80);*/
