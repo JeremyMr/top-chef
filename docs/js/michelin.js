@@ -1,3 +1,5 @@
+//You can find the description of the project at the TOP of the README.md
+
 var fs = require('fs');
 var request = require('request');
 var cheerio = require('cheerio');
