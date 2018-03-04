@@ -2,6 +2,16 @@
 
 > Eat well and cheaper than usually
 
+In this project, I've scraped the starred restaurants on the michelin's website and saved theme in a JSON file.
+You can also find the beginning of a server (on the port 80) which just display a simple message.
+
+I didn't manage to scrape "La fouchette" to find the deals related to the starred restaurants and to do a good display with react.
+
+To write the list of the starred restaurants, you need to delete the file "michelin.json" and write in the console "node main.js" (don't forget to be in the good folder : top-chef/docs/js).
+
+To display the message from the server write "node server.js" in the console (in the same folder) and "localhost:80" in the browser.
+
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
